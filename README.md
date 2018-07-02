@@ -1,1 +1,0 @@
-# longnd_idea
