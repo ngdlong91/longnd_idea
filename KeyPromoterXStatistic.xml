@@ -9,12 +9,28 @@
           <Count>1</Count>
         </Item>
       </Statistic>
+      <Statistic Action="Copy Reference">
+        <Item>
+          <IdeaActionID>CopyReference</IdeaActionID>
+          <ShortCut>'Ctrl+Alt+Shift+C'</ShortCut>
+          <Description>Copy Reference</Description>
+          <Count>1</Count>
+        </Item>
+      </Statistic>
       <Statistic Action="Database">
         <Item>
           <IdeaActionID>ActivateDatabaseToolWindow</IdeaActionID>
           <ShortCut>'Ctrl+Alt+1'</ShortCut>
           <Description>Database</Description>
-          <Count>36</Count>
+          <Count>38</Count>
+        </Item>
+      </Statistic>
+      <Statistic Action="Database Tools...">
+        <Item>
+          <IdeaActionID>DatabaseView.ToolsPopup</IdeaActionID>
+          <ShortCut>'Alt+Enter'</ShortCut>
+          <Description>Database Tools...</Description>
+          <Count>3</Count>
         </Item>
       </Statistic>
       <Statistic Action="Debug 'RemoteDebug'">
@@ -47,6 +63,14 @@
           <ShortCut>'Delete'</ShortCut>
           <Description>Delete...</Description>
           <Count>5</Count>
+        </Item>
+      </Statistic>
+      <Statistic Action="Disconnect">
+        <Item>
+          <IdeaActionID>DatabaseView.CloseConnectionAction</IdeaActionID>
+          <ShortCut>'Ctrl+F2'</ShortCut>
+          <Description>Disconnect</Description>
+          <Count>1</Count>
         </Item>
       </Statistic>
       <Statistic Action="Find">
@@ -246,6 +270,14 @@
           <IdeaActionID>Stop</IdeaActionID>
           <ShortCut>'Ctrl+F2'</ShortCut>
           <Description>Stop 'go build main.go'</Description>
+          <Count>1</Count>
+        </Item>
+      </Statistic>
+      <Statistic Action="Synchronize">
+        <Item>
+          <IdeaActionID>DatabaseView.SynchronizeAction</IdeaActionID>
+          <ShortCut>'Ctrl+Alt+Y'</ShortCut>
+          <Description>Synchronize</Description>
           <Count>1</Count>
         </Item>
       </Statistic>
