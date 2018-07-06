@@ -19,26 +19,26 @@
       <option name="GO" value="true" />
     </context>
   </template>
-  <template name="b.reqerr" value="$CONTROLLER$.Data[&quot;json&quot;] = ezresponse.ResError(ezerror.$CODE$)" description="custom invalid request" toReformat="true" toShortenFQNames="true">
-    <variable name="CONTROLLER" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="CODE" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="b.rerr" value="$CONTROLLER$.Data[&quot;json&quot;] = ezresponse.ResError(ezerror.$CODE$)" description="custom invalid request" toReformat="true" toShortenFQNames="true">
+    <variable name="CONTROLLER" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="CODE" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GO" value="true" />
     </context>
   </template>
-  <template name="b.reqsuc" value="$CONTROLLER$.Data[&quot;json&quot;] = ezresponse.ResSuccess($DATA$)" description="custom request success" toReformat="true" toShortenFQNames="true">
+  <template name="b.rsuc" value="$CONTROLLER$.Data[&quot;json&quot;] = ezresponse.ResSuccess($DATA$)" description="custom request success" toReformat="true" toShortenFQNames="true">
     <variable name="CONTROLLER" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="DATA" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GO" value="true" />
     </context>
   </template>
-  <template name="b.reqdec" value="var reqObj $REQUEST_STRUCT$&#10;loadRequestErr := json.Unmarshal($CONTROLLER$.Ctx.Input.RequestBody, &amp;reqObj)&#10;if loadRequestErr != nil {&#10;&#9;logs.Error(&quot;[$PACKAGE$:$LOCATION$][$FUNCTION$] Cannot decode package. Details: &quot;, loadRequestErr.Error())&#10;&#9;$CONTROLLER$.Data[&quot;json&quot;] = &amp;ResMessage{StatusCode: StatusCodeInvalidRequest, Message: StatusMessageInvalidRequest}&#10;}&#10;" description="Decode request object" toReformat="true" toShortenFQNames="true">
+  <template name="b.reqdec" value="var reqObj $REQUEST_STRUCT$&#10;loadRequestErr := json.Unmarshal($CONTROLLER$.Ctx.Input.RequestBody, &amp;reqObj)&#10;if loadRequestErr != nil {&#10;&#9;logs.Error(&quot;[$PACKAGE$:$LOCATION$][$FUNCTION$] Cannot decode package. Details: &quot;, loadRequestErr.Error())&#10;&#9;$CONTROLLER$.Data[&quot;json&quot;] = ezresponse.ResError(ezerror.InvalidRequest)&#10;&#9;return&#10;}&#10;" description="Decode request object" toReformat="true" toShortenFQNames="true">
     <variable name="REQUEST_STRUCT" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="PACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTROLLER" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="LOCATION" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="FUNCTION" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="CONTROLLER" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GO" value="true" />
     </context>
@@ -75,9 +75,26 @@
       <option name="GO" value="true" />
     </context>
   </template>
-  <template name="b.fcmt" value="// $FUNC$ $DESC$" description="" toReformat="false" toShortenFQNames="true">
+  <template name="b.fcmt" value="// $FUNC$ $DESC$&#10;// Status" description="" toReformat="false" toShortenFQNames="true">
     <variable name="FUNC" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
     <variable name="DESC" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="func.r" value="func ($VAR$) $NAME$($ARGS$) $RETURN$ {&#10;    $BODY$&#10;}" description="func with receiver" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ARGS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RETURN" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BODY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="func.c" value="func ($VAR$) $NAME$() {&#10;}" description="controller function" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GO" value="true" />
     </context>
