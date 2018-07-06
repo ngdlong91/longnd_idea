@@ -76,7 +76,7 @@
       <option name="GO" value="true" />
     </context>
   </template>
-  <template name="b.fcmt" value="// $FUNC$ $DESC$" toReformat="false" toShortenFQNames="true">
+  <template name="b.fcmt" value="// $FUNC$ $DESC$" description="" toReformat="false" toShortenFQNames="true">
     <variable name="FUNC" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
     <variable name="DESC" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
