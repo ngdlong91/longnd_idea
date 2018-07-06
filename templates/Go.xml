@@ -92,9 +92,16 @@
       <option name="GO" value="true" />
     </context>
   </template>
-  <template name="func.c" value="func ($VAR$) $NAME$() {&#10;}" description="controller function" toReformat="true" toShortenFQNames="true">
+  <template name="func.c" value="func ($VAR$) $NAME$() {&#10;defer $CONTROLLER$.ServeJSON()&#10;var reqObj ezrequest.$REQUEST_STRUCT$&#10;loadRequestErr := json.Unmarshal($CONTROLLER$.Ctx.Input.RequestBody, &amp;reqObj)&#10;if loadRequestErr != nil {&#10;&#9;logs.Error(&quot;[$PACKAGE$:$LOCATION$][$FUNCTION$] Cannot decode package. Details: &quot;, loadRequestErr.Error())&#10;&#9;$CONTROLLER$.Data[&quot;json&quot;] = ezresponse.ResError(ezerror.InvalidRequest)&#10;&#9;return&#10;}&#10;&#10;services := ezservices.$SERVICES${$REQUEST_STRUCT$:reqObj}&#10;services.$ACTION$&#10;$CONTROLLER$.Data[&quot;json&quot;] = services.Response&#10;}" description="controller function" toReformat="true" toShortenFQNames="true">
     <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTROLLER" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="REQUEST_STRUCT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PACKAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LOCATION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FUNCTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SERVICES" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GO" value="true" />
     </context>
