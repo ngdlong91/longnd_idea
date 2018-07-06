@@ -19,15 +19,14 @@
       <option name="GO" value="true" />
     </context>
   </template>
-  <template name="b.reqerr" value="$CONTROLLER$.Data[&quot;json&quot;] = &amp;ResMessage{StatusCode: $CODE$, Message: $MESSAGE$}" description="custom invalid request" toReformat="true" toShortenFQNames="true">
+  <template name="b.reqerr" value="$CONTROLLER$.Data[&quot;json&quot;] = ezresponse.ResError(ezerror.$CODE$)" description="custom invalid request" toReformat="true" toShortenFQNames="true">
     <variable name="CONTROLLER" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="CODE" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="MESSAGE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GO" value="true" />
     </context>
   </template>
-  <template name="b.reqsuc" value="$CONTROLLER$.Data[&quot;json&quot;] = &amp;ResMessage{StatusCode: StatusCodeOK, Data: $DATA$}" description="custom request success" toReformat="true" toShortenFQNames="true">
+  <template name="b.reqsuc" value="$CONTROLLER$.Data[&quot;json&quot;] = ezresponse.ResSuccess($DATA$)" description="custom request success" toReformat="true" toShortenFQNames="true">
     <variable name="CONTROLLER" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="DATA" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
