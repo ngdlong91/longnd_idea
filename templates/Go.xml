@@ -106,13 +106,13 @@
       <option name="GO" value="true" />
     </context>
   </template>
-  <template name="serr" value="services.Response = *ezresponse.ResError($CODE$)" toReformat="false" toShortenFQNames="true">
+  <template name="serr" value="services.Response = *ezresponse.ResError($CODE$)" description="" toReformat="false" toShortenFQNames="true">
     <variable name="CODE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GO" value="true" />
     </context>
   </template>
-  <template name="ssuc" value="services.Response = *ezresponse.ResSuccess($DATA$)" toReformat="false" toShortenFQNames="true">
+  <template name="ssuc" value="services.Response = *ezresponse.ResSuccess($DATA$)" description="" toReformat="false" toShortenFQNames="true">
     <variable name="DATA" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GO" value="true" />
