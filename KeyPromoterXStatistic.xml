@@ -86,7 +86,7 @@
           <IdeaActionID>GotoDeclaration</IdeaActionID>
           <ShortCut>'Ctrl+B' or 'Ctrl+Button1 Click'</ShortCut>
           <Description>Declaration</Description>
-          <Count>380</Count>
+          <Count>384</Count>
         </Item>
       </Statistic>
       <Statistic Action="Delete Row">
@@ -110,7 +110,7 @@
           <IdeaActionID>DatabaseView.CloseConnectionAction</IdeaActionID>
           <ShortCut>'Ctrl+F2'</ShortCut>
           <Description>Disconnect</Description>
-          <Count>12</Count>
+          <Count>13</Count>
         </Item>
       </Statistic>
       <Statistic Action="Drop">
@@ -510,7 +510,7 @@
           <IdeaActionID>GotoTest</IdeaActionID>
           <ShortCut>'Ctrl+Shift+T'</ShortCut>
           <Description>Test</Description>
-          <Count>11</Count>
+          <Count>12</Count>
         </Item>
       </Statistic>
       <Statistic Action="Update Project...">
