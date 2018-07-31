@@ -54,7 +54,7 @@
           <IdeaActionID>DatabaseView.ToolsPopup</IdeaActionID>
           <ShortCut>'Alt+Enter'</ShortCut>
           <Description>Database Tools...</Description>
-          <Count>13</Count>
+          <Count>14</Count>
         </Item>
       </Statistic>
       <Statistic Action="Debug 'RemoteDebug'">
@@ -78,7 +78,15 @@
           <IdeaActionID>GotoDeclaration</IdeaActionID>
           <ShortCut>'Ctrl+B' or 'Ctrl+Button1 Click'</ShortCut>
           <Description>Declaration</Description>
-          <Count>365</Count>
+          <Count>366</Count>
+        </Item>
+      </Statistic>
+      <Statistic Action="Delete Row">
+        <Item>
+          <IdeaActionID>Console.TableResult.DeleteRows</IdeaActionID>
+          <ShortCut>'Ctrl+Y'</ShortCut>
+          <Description>Delete Row</Description>
+          <Count>1</Count>
         </Item>
       </Statistic>
       <Statistic Action="Delete...">
@@ -214,7 +222,15 @@
           <IdeaActionID>Jdbc.OpenConsole.Any</IdeaActionID>
           <ShortCut>'Ctrl+Shift+F10'</ShortCut>
           <Description>Jump to Console...</Description>
-          <Count>14</Count>
+          <Count>15</Count>
+        </Item>
+      </Statistic>
+      <Statistic Action="Jump to Editor">
+        <Item>
+          <IdeaActionID>Jdbc.OpenEditor</IdeaActionID>
+          <ShortCut>'F4'</ShortCut>
+          <Description>Jump to Editor</Description>
+          <Count>1</Count>
         </Item>
       </Statistic>
       <Statistic Action="Jump to Navigation Bar">
@@ -246,7 +262,7 @@
           <IdeaActionID>ModifyObject</IdeaActionID>
           <ShortCut>'Ctrl+F6'</ShortCut>
           <Description>Modify Table...</Description>
-          <Count>13</Count>
+          <Count>14</Count>
         </Item>
       </Statistic>
       <Statistic Action="Move...">
@@ -281,6 +297,14 @@
           <Count>9</Count>
         </Item>
       </Statistic>
+      <Statistic Action="Properties">
+        <Item>
+          <IdeaActionID>DatabaseView.PropertiesAction</IdeaActionID>
+          <ShortCut>'Shift+Enter'</ShortCut>
+          <Description>Properties</Description>
+          <Count>1</Count>
+        </Item>
+      </Statistic>
       <Statistic Action="Refactor This...">
         <Item>
           <IdeaActionID>Refactorings.QuickListPopupAction</IdeaActionID>
@@ -302,7 +326,7 @@
           <IdeaActionID>Console.TableResult.Reload</IdeaActionID>
           <ShortCut>'Ctrl+F5'</ShortCut>
           <Description>Reload Page</Description>
-          <Count>16</Count>
+          <Count>17</Count>
         </Item>
       </Statistic>
       <Statistic Action="Rename...">
@@ -422,6 +446,14 @@
           <IdeaActionID>Stop</IdeaActionID>
           <ShortCut>'Ctrl+F2'</ShortCut>
           <Description>Stop 'go build main.go'</Description>
+          <Count>1</Count>
+        </Item>
+      </Statistic>
+      <Statistic Action="Submit">
+        <Item>
+          <IdeaActionID>Console.TableResult.Submit</IdeaActionID>
+          <ShortCut>'Ctrl+Enter'</ShortCut>
+          <Description>Submit</Description>
           <Count>1</Count>
         </Item>
       </Statistic>
