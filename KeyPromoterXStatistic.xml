@@ -6,7 +6,15 @@
           <IdeaActionID>Console.TableResult.AddRow</IdeaActionID>
           <ShortCut>'Alt+Insert'</ShortCut>
           <Description>Add New Row</Description>
-          <Count>2</Count>
+          <Count>3</Count>
+        </Item>
+      </Statistic>
+      <Statistic Action="Clone Row">
+        <Item>
+          <IdeaActionID>Console.TableResult.CloneRow</IdeaActionID>
+          <ShortCut>'Ctrl+D'</ShortCut>
+          <Description>Clone Row</Description>
+          <Count>1</Count>
         </Item>
       </Statistic>
       <Statistic Action="Columns List">
@@ -54,7 +62,7 @@
           <IdeaActionID>ActivateDatabaseToolWindow</IdeaActionID>
           <ShortCut>'Ctrl+Alt+1'</ShortCut>
           <Description>Database</Description>
-          <Count>97</Count>
+          <Count>100</Count>
         </Item>
       </Statistic>
       <Statistic Action="Database Tools...">
@@ -86,7 +94,7 @@
           <IdeaActionID>GotoDeclaration</IdeaActionID>
           <ShortCut>'Ctrl+B' or 'Ctrl+Button1 Click'</ShortCut>
           <Description>Declaration</Description>
-          <Count>560</Count>
+          <Count>600</Count>
         </Item>
       </Statistic>
       <Statistic Action="Delete Row">
@@ -494,7 +502,7 @@
           <IdeaActionID>Console.TableResult.Submit</IdeaActionID>
           <ShortCut>'Ctrl+Enter'</ShortCut>
           <Description>Submit</Description>
-          <Count>8</Count>
+          <Count>9</Count>
         </Item>
       </Statistic>
       <Statistic Action="Synchronize">
