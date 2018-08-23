@@ -3,6 +3,7 @@
     <extensionMap>
       <mapping ext="conf" type="Native" />
       <mapping pattern="up" type="PLAIN_TEXT" />
+      <mapping ext="tmpl" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
