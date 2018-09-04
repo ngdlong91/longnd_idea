@@ -1,12 +1,12 @@
 <application>
   <component name="dataSourceStorage" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="ezjob@159.65.141.62" uuid="3c6b0841-591d-4130-a3ce-711eb02a1e72">
+    <data-source source="LOCAL" name="Prod@159.65.141.62" uuid="3c6b0841-591d-4130-a3ce-711eb02a1e72">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://159.65.141.62:5432/ezjob</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="ezjob@159.65.129.222" uuid="c82807dc-5229-41bd-bc87-b9fdb67c64b9">
+    <data-source source="LOCAL" name="Services@159.65.129.222" uuid="c82807dc-5229-41bd-bc87-b9fdb67c64b9">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
