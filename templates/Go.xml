@@ -118,14 +118,14 @@
       <option name="GO" value="true" />
     </context>
   </template>
-  <template name="newhandler" value="func (h $TYPE_1$) $NAME$(w http.ResponseWriter, r *http.Request) {   &#10; $END$&#10;}" toReformat="true" toShortenFQNames="true">
+  <template name="newhandler" value="func (h $TYPE_1$) $NAME$(w http.ResponseWriter, r *http.Request) {   &#10; $END$&#10;}" description="" toReformat="true" toShortenFQNames="true">
     <variable name="TYPE_1" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="GO" value="true" />
     </context>
   </template>
-  <template name="structvar" value="&amp;$STRUCT${$VARS$}$END$" toReformat="true" toShortenFQNames="true">
+  <template name="structvar" value="&amp;$STRUCT${$VARS$}$END$" description="" toReformat="true" toShortenFQNames="true">
     <variable name="STRUCT" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="VARS" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
