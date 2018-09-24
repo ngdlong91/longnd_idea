@@ -1,10 +1,10 @@
 <application>
   <component name="dataSourceStorage" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Prod@159.65.141.62" uuid="3c6b0841-591d-4130-a3ce-711eb02a1e72">
+    <data-source source="LOCAL" name="Prod-EzJob@35.198.227.133" uuid="3c6b0841-591d-4130-a3ce-711eb02a1e72">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://159.65.141.62:5432/ezjob</jdbc-url>
+      <jdbc-url>jdbc:postgresql://35.198.227.133:5432/ezjob</jdbc-url>
     </data-source>
     <data-source source="LOCAL" name="Services@159.65.129.222" uuid="c82807dc-5229-41bd-bc87-b9fdb67c64b9">
       <driver-ref>postgresql</driver-ref>
@@ -12,11 +12,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://159.65.129.222:5432/ezjob</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="ezjob@128.199.228.149" uuid="11db38bb-f4f0-450f-8bc7-03b316e1670e">
+    <data-source source="LOCAL" name="Prod-EzJob@159.65.141.62" uuid="03fe9d4f-f828-4f2a-a647-d147267b0f59">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://128.199.228.149:5432/ezjob</jdbc-url>
+      <jdbc-url>jdbc:postgresql://159.65.141.62:5432/ezjob</jdbc-url>
     </data-source>
   </component>
 </application>
