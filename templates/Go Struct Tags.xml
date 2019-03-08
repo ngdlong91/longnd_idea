@@ -1,0 +1,9 @@
+<templateSet group="Go Struct Tags">
+  <template name="val" value="validate:&quot;$TYPE$&quot;" description="validate" toReformat="false" toShortenFQNames="true">
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO_TAG" value="true" />
+      <option name="GO_TAG_LITERAL" value="true" />
+    </context>
+  </template>
+</templateSet>

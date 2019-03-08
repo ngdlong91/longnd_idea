@@ -1,0 +1,9 @@
+<templateSet group="Custom">
+  <template name="c.region" value="//region $NAME$&#10;$CODE$&#10;//endregion $NAME$" description="region quick add" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CODE" expression="clipboard()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+</templateSet>

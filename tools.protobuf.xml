@@ -1,0 +1,9 @@
+<application>
+  <component name="ProtobufSettings">
+    <option name="includePaths">
+      <list>
+        <option value="$USER_HOME$/go/src/github.com/ngdlong91/sauth/proto" />
+      </list>
+    </option>
+  </component>
+</application>

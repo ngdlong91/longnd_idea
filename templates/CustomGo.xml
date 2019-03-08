@@ -1,0 +1,146 @@
+<templateSet group="CustomGo">
+  <template name="db.select" value="$NAME$ struct {&#10;&#9;&#9;params struct {}&#10;&#9;    Resp struct {}&#10;&#9;&#9;ds       *goqu.Dataset&#10;&#9;&#9;db *goqu.Database&#10;&#9;&#9;logger   *logrus.Entry&#10;&#9;}" description="Db executor struct select template" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="db.action" value="$NAME$ struct {&#10;       params struct {}&#10;&#9;    Resp struct {}&#10;&#9;&#9;record goqu.Record&#10;&#9;&#9;ds       *goqu.Dataset&#10;&#9;&#9;db *goqu.Database&#10;&#9;&#9;logger   *logrus.Entry&#10;&#9;}" description="Db executor struct action template" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="db.new" value="func New$NAME$Executor (logger *logrus.Entry) *$NAME$ {&#10;    return &amp;$NAME${&#10;        db:     storage.NewPostgresStorage(logger).Builder(),&#10;        logger: logger.WithField(&quot;repo&quot;,&quot;$CASE$&quot;),&#10;    }&#10;}" description="Db executor new func" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="methodReturnType()" defaultValue="" alwaysStopAt="true" />
+    <variable name="CASE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="go.new" value="func New$NAME$ (logger *logrus.Entry) *$NAME$ {&#10;    $RETURN$&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="RETURN" expression="defaultReturnValues(errorVariableName)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="db.page" value="func ($VAR$ *$NAME$) SetLimit(limit int64) {&#10;&#9;$VAR$.limit = limit&#10;}&#10;&#10;func ($VAR$ *$NAME$) SetPage(page int64) {&#10;&#9;$VAR$.page = page&#10;}" description="Db executor struct select pagination" toReformat="true" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="guc.success" value="uc.c.JSON(http.StatusOK, $RESPONSE$)" description="Use case executor response success" toReformat="true" toShortenFQNames="true">
+    <variable name="RESPONSE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="uc.failed" value="uc.c.JSON(http.$CODE$, nil)" description="Use case executor response failed" toReformat="true" toShortenFQNames="true">
+    <variable name="CODE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="guc.struct" value="$NAME$ struct {&#10;&#9;&#9;ctx *gin.Context&#10;&#9;&#9;logger *logrus.Entry&#10;&#9;&#9;&#10;&#9;&#9;goNext bool&#10;&#9;}" description="Use case executor response failed" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="guc.new" value="&#10;func New$STRUCT$Worker(logger *logrus.Entry) *$STRUCT$ {&#10;&#9;uc := &amp;$STRUCT${&#10;&#9;&#9;logger: logger,&#10;&#9;}&#10;&#9;return uc&#10;}&#10;" description="Use case executor response failed" toReformat="true" toShortenFQNames="true">
+    <variable name="STRUCT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="iusecase.new" value="&#10;func New$STRUCT$Worker(logger *logrus.Entry) *$STRUCT$ {&#10;&#9;uc := &amp;$STRUCT${&#9;&#9;&#10;&#9;&#9;logger: logger.WithField(&quot;case&quot;,&quot;$CASE$&quot;),&#10;&#9;}&#10;&#9;return uc&#10;}&#10;" description="Use case executor response failed" toReformat="true" toShortenFQNames="true">
+    <variable name="STRUCT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CASE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="iusecase.struct" value="$NAME$ struct {&#10;&#9;&#9;logger *logrus.Entry&#10;&#9;&#9;next bool&#10;&#9;}" description="Use case executor response failed" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="buc.new" value="&#10;func New$STRUCT$Worker(logger *logrus.Entry) *$STRUCT$ {&#10;&#9;uc := &amp;$STRUCT${&#10;&#9;&#9;logger: logger,&#10;&#9;}&#10;&#9;return uc&#10;}&#10;" description="Use case executor response failed" toReformat="true" toShortenFQNames="true">
+    <variable name="STRUCT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="buc.struct" value="$NAME$ struct {&#10;        req struct {}&#10;        Resp    dto.Response&#10;&#9;&#9;logger *logrus.Entry&#10;&#9;&#9;ctx    *context.Context&#10;&#9;&#9;next bool&#10;&#9;}" description="Use case executor response failed" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="uc.stop" value="uc.logger.Debug(&quot;$LOG_MSG$ &quot;)&#10;uc.SetResponse(errs.$ERR_CODE$.Response(nil))&#10;uc.SetMoveNext(false)&#10;return" description="Usecase run error" toReformat="true" toShortenFQNames="true">
+    <variable name="LOG_MSG" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ERR_CODE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="uc.next" value="uc.SetMoveNext(true)" description="Usecase move to next step" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="c.err" value="$CODE$.SetMsg(i18n.GetError(&quot;$CODE$&quot;))" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="CODE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="buc.finish" value="if err.IsSuccess() {&#10;&#9;&#9;uc.SetResponse(err.Response($DATA$))&#10;&#9;} else {&#10;&#9;uc.SetResponse(err.Response(nil))&#10;&#9;}&#10;&#10;&#9;uc.SetMoveNext(true)" description="Usecase run finish" toReformat="true" toShortenFQNames="true">
+    <variable name="DATA" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="err.check" value="if err := $CHECK$; !err.IsSuccess() {&#10;&#9;&#9;$POINT$&#10;&#9;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="CHECK" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="POINT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="uc.struct" value="type $NAME$ struct {&#10;        req struct {}&#10;        Resp struct {}&#10;&#9;&#9;logger *logrus.Entry&#10;&#9;&#9;next bool&#10;&#9;}" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="uc.new" value="func New$STRUCT$Worker(logger *logrus.Entry) *$STRUCT$ {&#10;&#9;uc := &amp;$STRUCT${&#10;&#9;&#9;logger: logger,&#10;&#9;}&#10;&#9;return uc&#10;}&#10;" description="Use case new function" toReformat="true" toShortenFQNames="true">
+    <variable name="STRUCT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="new.error" value="&#10;type $ERROR_TYPE$ int&#10;&#10;//region $ERROR_TYPE$&#10;var eMsg map[$ERROR_TYPE$]string&#10;&#10;const defaultMsg string = &quot;Undefined error...&quot;&#10;&#10;func (e $ERROR_TYPE$) IsSuccess() bool {&#10;&#9;return e.Val() == Success.Val()&#10;}&#10;&#10;func (e $ERROR_TYPE$) Msg() string {&#10;&#9;message := eMsg[e]&#10;&#9;if message == &quot;&quot; {&#10;&#9;&#9;return defaultMsg&#10;&#9;}&#10;&#9;return message&#10;}&#10;&#10;func (e $ERROR_TYPE$) Val() int {&#10;&#9;return int(e)&#10;}&#10;&#10;func (e $ERROR_TYPE$) Success() ierr.CustomError {&#10;&#9;return Success&#10;}&#10;&#10;func (e $ERROR_TYPE$) Response(data interface{}) dto.Response {&#10;&#9;return dto.Response{StatusCode: e.Val(), Message: e.Msg(), Data: data}&#10;}&#10;&#10;func (e $ERROR_TYPE$) SetMsg(msg string) {&#10;&#9;eMsg[e] = msg&#10;}&#10;&#10;//endregion $ERROR_TYPE$&#10;&#10;const (&#10;&#9;Success $ERROR_TYPE$ = iota + 1000&#10;)&#10;&#10;const (&#10;&#9;InvalidRequestParams $ERROR_TYPE$ = iota + 2000&#10;)&#10;&#10;func init() {&#10;&#9;eMsg = make(map[AuthError]string)&#10;&#10;&#9;Success.SetMsg(&quot;Success&quot;)&#10;&#9;InvalidRequestParams.SetMsg(&quot;Invalid request params&quot;)&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="ERROR_TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="t.worker" value="func Test$NAME$(t *testing.T) {&#10;&#9;type args struct {&#9;&#9;&#10;&#9;}&#10;&#9;type res struct {&#10;&#9;}&#10;&#9;tests := []struct {&#10;&#9;&#9;name string&#10;&#9;&#9;args args&#10;&#9;&#9;want res&#10;&#9;}{&#10;&#9;&#9;{&#10;&#9;&#9;&#9;name: &quot;Connection failed&quot;,&#10;&#9;&#9;&#9;args: args{&#10;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;},&#10;&#9;&#9;&#9;want: res{&#10;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;},&#10;&#9;&#9;},&#10;&#9;}&#10;&#9;for _, tt := range tests {&#10;&#9;&#9;t.Run(tt.name, func(t *testing.T) {&#10;&#9;&#9;&#9;worker := $GENERATOR$(ezjob.Logs)&#10;&#9;&#9;&#9;usecase.Run(worker)&#10;&#9;&#9;&#9;chk := assert.New(t)&#10;&#9;&#9;&#9;if chk.NotNil(worker.Resp) {&#10;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;ezjob.Logs.Debugf(&quot;Response %#v &quot;, worker.Resp)&#10;&#9;&#9;})&#10;&#9;}&#10;}" description="test" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="GENERATOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+  <template name="t.init" value="&#10;func init() {&#10;&#9;workPath, err := os.Getwd()&#10;&#9;if err != nil {&#10;&#9;&#9;panic(err)&#10;&#9;}&#10;&#9;ezjob.LoadFrom(workPath + &quot;$PATH$&quot;)&#10;}" description="test" toReformat="true" toShortenFQNames="true">
+    <variable name="PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GO" value="true" />
+    </context>
+  </template>
+</templateSet>
